@@ -1,13 +1,14 @@
-
-<script id="sap-ui-bootstrap"
-        src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
-        data-sap-ui-theme="sap_bluecrystal"
-        data-sap-ui-xx-bindingSyntax="complex"
-        data-sap-ui-libs="sap.m, sap.ui.commons"></script>
-
+<html>
+<head>
+    <script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" id="sap-ui-bootstrap" data-sap-ui-theme="sap_bluecrystal" data-sap-ui-libs="sap.ui.commons,sap.ui.table"></script>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+<body class="sapUiBody" id="content" >
 <script id="view1" type="ui5/xmlview">
+
     <mvc:View
-      controllerName="source.controllers.view1"
+      controllerName="sources.controllers.view1"
       xmlns="sap.m"
       xmlns:core="sap.ui.core"
       xmlns:mvc="sap.ui.core.mvc" >
@@ -26,7 +27,18 @@
 <Button text="add" press="addInput"/>
 <Button text="get value" press="getValue"/>
     </mvc:View>
+    </script>
+<script type="text/javascript">
+
+    sap.ui.localResources("sources");
+
+    sap.ui.controller("view.Main", {
+        doSomething : function(oEvent) {}
+    });
+    var oView = sap.ui.xmlview({
+        viewContent: jQuery("#view1").html()
+    });
+    oView.placeAt("content");
 </script>
-
-
-<div id="uiArea"></div>
+</body>
+</html>

@@ -32,11 +32,5 @@ sap.ui.controller("sources.controllers.view1", {
     }
 });
 
-var app = new sap.m.App({});
-
-var oView = sap.ui.xmlview({
-    viewContent: jQuery("#view1").html()
-});
-
 app.addPage(oView);
 app.placeAt("uiArea");
