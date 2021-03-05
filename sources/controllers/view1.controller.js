@@ -31,6 +31,3 @@ sap.ui.controller("sources.controllers.view1", {
         rowItemContainer.destroy();
     }
 });
-
-app.addPage(oView);
-app.placeAt("uiArea");
