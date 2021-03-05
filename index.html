@@ -1,0 +1,32 @@
+
+<script id="sap-ui-bootstrap"
+        src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-xx-bindingSyntax="complex"
+        data-sap-ui-libs="sap.m, sap.ui.commons"></script>
+
+<script id="view1" type="ui5/xmlview">
+    <mvc:View
+      controllerName="source.controllers.view1"
+      xmlns="sap.m"
+      xmlns:core="sap.ui.core"
+      xmlns:mvc="sap.ui.core.mvc" >
+
+
+<Panel id="idPnl" >
+<FlexBox id="idFB"
+					alignItems="Center"
+					justifyContent="Start">
+					<items>
+						<Input />
+            <core:Icon src="sap-icon://add" press="addInput" />
+					</items>
+				</FlexBox>
+       </Panel>
+<Button text="add" press="addInput"/>
+<Button text="get value" press="getValue"/>
+    </mvc:View>
+</script>
+
+
+<div id="uiArea"></div>
